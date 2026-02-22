@@ -29,12 +29,11 @@ const AnimatedCounter = ({ value, suffix = '', duration = 2 }: { value: number; 
 
   return <span ref={ref}>{count}{suffix}</span>
 }
-
 const stats = [
-  { label: 'Clients', value: 50, suffix: '+' },
-  { label: 'Projects', value: 120, suffix: '+' },
-  { label: 'Years', value: 5, suffix: '+' },
-  { label: 'Awards', value: 15, suffix: '' },
+  { label: "Mijozlar", value: 50, suffix: "+" },
+  { label: "Loyihalar", value: 120, suffix: "+" },
+  { label: "Tajriba yili", value: 5, suffix: "+" },
+  { label: "Mukofotlar", value: 15, suffix: "" },
 ]
 
 export default function Statistics() {

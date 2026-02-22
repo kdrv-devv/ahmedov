@@ -232,7 +232,7 @@ html{
 }
 
 .hero{
-  background-image: url('../public/hero-img.jpg');
+  background-image: url('/herobg.png');
   background-size: cover;
   background-position: center;
 }

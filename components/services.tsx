@@ -1,28 +1,32 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Pen, Code, Palette, Zap } from 'lucide-react'
+import { Video, Smartphone, GraduationCap, TrendingUp } from 'lucide-react'
 
 const services = [
   {
-    icon: Pen,
-    title: 'UI/UX Design',
-    description: 'Creating intuitive and beautiful user interfaces that solve real problems and delight users.',
+    icon: Video,
+    title: 'Mobilografiya xizmati',
+    description:
+      'Biznes va shaxsiy brendlar uchun professional video suratga olish, reels va promo kontent yaratish xizmati.',
   },
   {
-    icon: Code,
-    title: 'Web Development',
-    description: 'Building fast, scalable, and accessible web applications with modern technologies.',
+    icon: Smartphone,
+    title: 'Reels & SMM kontent',
+    description:
+      'Instagram va TikTok uchun sotuvga yo‘naltirilgan kreativ video kontent ishlab chiqish va montaj qilish.',
   },
   {
-    icon: Palette,
-    title: 'Brand Design',
-    description: 'Developing cohesive brand identities that resonate with your target audience.',
+    icon: GraduationCap,
+    title: 'Mobilografiya kursi',
+    description:
+      'Noldan professional darajagacha mobilografiya o‘rgatamiz. Telefon orqali sifatli video olish va montaj qilishni amaliy tarzda o‘rganasiz.',
   },
   {
-    icon: Zap,
-    title: 'Performance',
-    description: 'Optimizing websites for speed, accessibility, and search engine visibility.',
+    icon: TrendingUp,
+    title: 'Daromad strategiyasi',
+    description:
+      'Mobilografiya orqali mijoz topish, shaxsiy brend yaratish va barqaror daromad qilish bo‘yicha aniq strategiyalar.',
   },
 ]
 
@@ -30,6 +34,7 @@ export default function Services() {
   return (
     <section id="services" className="bg-black py-24 px-6 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
+
         {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -39,10 +44,10 @@ export default function Services() {
           className="mb-16 text-center"
         >
           <h2 className="text-4xl lg:text-5xl font-black text-white mb-4">
-            What I <span className="text-red-500">Offer</span>
+            Men <span className="text-red-500">nima taklif qilaman</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Comprehensive services to bring your vision to life
+            Professional mobilografiya xizmati va daromadli kasb o‘rgatuvchi kurs
           </p>
         </motion.div>
 

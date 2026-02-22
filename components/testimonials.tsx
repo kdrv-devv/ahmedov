@@ -6,27 +6,31 @@ import { ChevronLeft, ChevronRight, Star } from 'lucide-react'
 
 const testimonials = [
   {
-    name: 'Sarah Johnson',
-    role: 'CEO, Tech Startup',
-    content: 'Working with MR was transformative. The design solutions were innovative and the development was flawless. Highly recommended!',
+    name: 'Jasur Karimov',
+    role: 'Mobilografiya kursi bitiruvchisi',
+    content:
+      'Kursga kelgunimcha oddiy telefon bilan shunchaki video olardim. Hozir esa mijozlarim bor va har oy stabil daromad qilyapman. Eng yoqqan tomoni — hammasi amaliy o‘rgatiladi.',
     rating: 5,
   },
   {
-    name: 'Michael Chen',
-    role: 'Product Manager, Agency',
-    content: 'Professional, creative, and delivered beyond expectations. The attention to detail and user experience is unmatched.',
+    name: 'Dilnoza Raxmonova',
+    role: 'SMM mutaxassisi',
+    content:
+      'Mobilografiya kursi menga kontent sifatini 2 baravar oshirishga yordam berdi. Reelslarim ko‘proq ko‘rila boshladi va mijozlar soni oshdi.',
     rating: 5,
   },
   {
-    name: 'Emma Davis',
-    role: 'Marketing Director',
-    content: 'Exceptional work on our brand redesign. MR understood our vision and brought it to life beautifully.',
+    name: 'Bekzod Ismoilov',
+    role: 'Boshlovchi mobilograf',
+    content:
+      '0 dan boshlaganman. Hozir esa to‘y va biznes uchun video olib berayapman. Kurs juda tushunarli va motivatsiya beradi.',
     rating: 5,
   },
   {
-    name: 'Alex Thompson',
-    role: 'Founder, Digital Agency',
-    content: 'A true professional who combines design excellence with technical expertise. Best decision we made.',
+    name: 'Madina Yo‘ldosheva',
+    role: 'Bloger',
+    content:
+      'Telefon bilan ham professional darajada video olish mumkinligini shu kursda bildim. Kontentim sifati ancha oshdi.',
     rating: 5,
   },
 ]
@@ -34,12 +38,15 @@ const testimonials = [
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0)
 
-  const next = () => setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-  const prev = () => setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
+  const next = () =>
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length)
+  const prev = () =>
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)
 
   return (
     <section id="testimonials" className="bg-black py-24 px-6 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
+
         {/* Section Title */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -49,10 +56,10 @@ export default function Testimonials() {
           className="mb-16 text-center"
         >
           <h2 className="text-4xl lg:text-5xl font-black text-white mb-4">
-            Client <span className="text-red-500">Testimonials</span>
+            O‘quvchilar <span className="text-red-500">fikrlari</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            What my clients have to say about working with me
+            Mobilografiya kursini tugatganlar natijalari va fikrlari
           </p>
         </motion.div>
 

@@ -18,7 +18,8 @@ export default function Footer() {
   return (
     <footer className="bg-black border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-6 py-20">
-        {/* Main Content */}
+        
+        {/* Asosiy Qism */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -27,14 +28,15 @@ export default function Footer() {
           className="mb-16"
         >
           <h2 className="text-6xl lg:text-7xl font-black text-white mb-6 text-balance">
-            MR <span className="text-red-500">Shomikuitte</span>
+            Shoxruh <span className="text-red-500">Ahmedov</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl">
-            Web designer and developer specializing in creating beautiful, functional digital experiences.
+            Professional mobilograf va mobilografiya kursi muallifi. 
+            Telefon orqali sifatli video olish, montaj qilish va daromad qilishni o‘rgataman.
           </p>
         </motion.div>
 
-        {/* Links & Social */}
+        {/* Havolalar */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -42,33 +44,44 @@ export default function Footer() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-gray-800 pt-12"
         >
-          {/* Quick Links */}
+          
+          {/* Tezkor havolalar */}
           <div>
-            <h3 className="text-white font-semibold mb-6 uppercase text-sm tracking-wide">Navigation</h3>
+            <h3 className="text-white font-semibold mb-6 uppercase text-sm tracking-wide">
+              Navigatsiya
+            </h3>
             <ul className="space-y-3">
-              {['Home', 'About', 'Services', 'Projects', 'Contact'].map((link) => (
-                <li key={link}>
+              {[
+                { name: 'Bosh sahifa', id: 'home' },
+                { name: 'Men haqimda', id: 'about' },
+                { name: 'Xizmatlar', id: 'services' },
+                { name: 'Ishlar', id: 'projects' },
+                { name: 'Bog‘lanish', id: 'contact' },
+              ].map((link) => (
+                <li key={link.id}>
                   <a
-                    href={`#${link.toLowerCase()}`}
+                    href={`#${link.id}`}
                     className="text-gray-400 hover:text-red-500 transition-colors"
                   >
-                    {link}
+                    {link.name}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Social Links */}
+          {/* Ijtimoiy tarmoqlar */}
           <div>
-            <h3 className="text-white font-semibold mb-6 uppercase text-sm tracking-wide">Social</h3>
+            <h3 className="text-white font-semibold mb-6 uppercase text-sm tracking-wide">
+              Ijtimoiy tarmoqlar
+            </h3>
             <div className="flex gap-4">
               {socialLinks.map(({ icon: Icon, href, label }) => (
                 <motion.a
                   key={label}
                   href={href}
-                  whileHover={{ scale: 1.2, color: '#ef4444' }}
-                  className="w-10 h-10 bg-gray-900 hover:bg-red-500 rounded-full flex items-center justify-center text-gray-400 hover:text-white transition-colors"
+                  whileHover={{ scale: 1.2}}
+                  className="w-10 h-10 bg-gray-900 hover:bg-red-500 rounded-full flex items-center justify-center  hover:text-white transition-colors"
                   aria-label={label}
                 >
                   <Icon size={18} />
@@ -78,7 +91,7 @@ export default function Footer() {
           </div>
         </motion.div>
 
-        {/* Bottom Section */}
+        {/* Pastki Qism */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -87,14 +100,15 @@ export default function Footer() {
           className="flex flex-col md:flex-row items-center justify-between gap-6 pt-12 border-t border-gray-800 mt-12"
         >
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} MR Shomikuitte. All rights reserved.
+            © {new Date().getFullYear()} Shoxruh Ahmedov. Barcha huquqlar himoyalangan.
           </p>
+
           <motion.button
             onClick={scrollToTop}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             className="w-10 h-10 bg-red-500 hover:bg-red-600 rounded-full flex items-center justify-center text-white transition-colors"
-            aria-label="Back to top"
+            aria-label="Yuqoriga qaytish"
           >
             <ArrowUp size={20} />
           </motion.button>
